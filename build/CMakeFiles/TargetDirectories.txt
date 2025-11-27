@@ -1,0 +1,3 @@
+/home/mx/CLionProjects/Library/build/CMakeFiles/Library.dir
+/home/mx/CLionProjects/Library/build/CMakeFiles/edit_cache.dir
+/home/mx/CLionProjects/Library/build/CMakeFiles/rebuild_cache.dir

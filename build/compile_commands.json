@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/mx/CLionProjects/Library/build",
+  "command": "/usr/bin/g++ -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles/Library.dir/main.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles/Library.dir/main.cpp.o -c /home/mx/CLionProjects/Library/main.cpp",
+  "file": "/home/mx/CLionProjects/Library/main.cpp",
+  "output": "/home/mx/CLionProjects/Library/build/CMakeFiles/Library.dir/main.cpp.o"
+},
+{
+  "directory": "/home/mx/CLionProjects/Library/build",
+  "command": "/usr/bin/g++ -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles/Library.dir/Book.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles/Library.dir/Book.cpp.o -c /home/mx/CLionProjects/Library/Book.cpp",
+  "file": "/home/mx/CLionProjects/Library/Book.cpp",
+  "output": "/home/mx/CLionProjects/Library/build/CMakeFiles/Library.dir/Book.cpp.o"
+},
+{
+  "directory": "/home/mx/CLionProjects/Library/build",
+  "command": "/usr/bin/g++ -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles/Library.dir/Queue.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles/Library.dir/Queue.cpp.o -c /home/mx/CLionProjects/Library/Queue.cpp",
+  "file": "/home/mx/CLionProjects/Library/Queue.cpp",
+  "output": "/home/mx/CLionProjects/Library/build/CMakeFiles/Library.dir/Queue.cpp.o"
+}
+]
