@@ -34,6 +34,16 @@ bool isEmpty(const Queue &q) {
     return q.front == nullptr;
 }
 
+int getQueueSize(const Queue &q) {
+    int count = 0;
+    QueueNode* temp = q.front;
+    while (temp) {
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+
 void cleanupQueue(Queue &q) {
     while (!isEmpty(q)) {
         dequeue(q);

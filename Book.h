@@ -1,6 +1,5 @@
 // Book.h
-#ifndef BOOK_H
-#define BOOK_H
+#pragma once
 #include <string>
 #include "Queue.h"
 using namespace std;
@@ -18,6 +17,8 @@ struct Book {
 
 void insertBook(Book*& head, int id, string title, string author, int totalCopies);
 Book* searchByID(Book* head, int id);
+Book* searchByTitle(Book* head, const string &title);
+Book* searchByAuthor(Book* head, const string &author);
 void displayBooks(Book* head);
 
 // Issue and Return
@@ -27,5 +28,3 @@ void returnBook(Book* book);
 // File
 void saveToFile(Book* head, const string &filename);
 void loadFromFile(Book*& head, const string &filename);
-
-#endif

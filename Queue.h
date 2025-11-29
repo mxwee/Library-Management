@@ -1,6 +1,5 @@
 // Queue.h
-#ifndef QUEUE_H
-#define QUEUE_H
+#pragma once
 #include <string>
 using namespace std;
 
@@ -19,6 +18,5 @@ struct Queue {
 void enqueue(Queue &q, string studentID);
 string dequeue(Queue &q);
 bool isEmpty(const Queue &q);
+int getQueueSize(const Queue &q);
 void cleanupQueue(Queue &q);
-
-#endif

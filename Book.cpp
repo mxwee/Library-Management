@@ -5,6 +5,15 @@
 using namespace std;
 
 void insertBook(Book*& head, int id, string title, string author, int totalCopies) {
+    if (searchByID(head, id)) {
+        cout << "Book ID already exists.\n";
+        return;
+    }
+    if (totalCopies < 0) {
+        cout << "Total copies cannot be negative.\n";
+        return;
+    }
+
     Book* newBook = new Book{id, title, author, totalCopies, totalCopies, Queue(), nullptr};
 
     if (!head || id < head->bookID) {
@@ -24,6 +33,22 @@ void insertBook(Book*& head, int id, string title, string author, int totalCopie
 Book* searchByID(Book* head, int id) {
     while (head) {
         if (head->bookID == id) return head;
+        head = head->next;
+    }
+    return nullptr;
+}
+
+Book* searchByTitle(Book* head, const string &title) {
+    while (head) {
+        if (head->title == title) return head;
+        head = head->next;
+    }
+    return nullptr;
+}
+
+Book* searchByAuthor(Book* head, const string &author) {
+    while (head) {
+        if (head->author == author) return head;
         head = head->next;
     }
     return nullptr;
@@ -50,12 +75,22 @@ void issueBook(Book* book, string studentID) {
         book->availableCopies--;
         cout << "Book issued.\n";
     } else {
+        int posBefore = getQueueSize(book->waitingList);
         enqueue(book->waitingList, studentID);
-        cout << "Added to waiting list.\n";
+        int posAfter = getQueueSize(book->waitingList);
+        if (posAfter > posBefore) {
+            cout << "Added to waiting list. Position: " << posAfter << endl;
+        } else {
+            cout << "Student already in waiting list.\n";
+        }
     }
 }
 
 void returnBook(Book* book) {
+    if (book->availableCopies >= book->totalCopies) {
+        cout << "All copies are already available.\n";
+        return;
+    }
     if (isEmpty(book->waitingList)) {
         book->availableCopies++;
         cout << "Book returned.\n";
