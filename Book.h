@@ -1,9 +1,9 @@
-// Book.h
 #pragma once
 #include <string>
 #include "Queue.h"
 using namespace std;
 
+// Linked list node to represent book
 struct Book {
     int bookID;
     string title;
@@ -11,10 +11,11 @@ struct Book {
     int totalCopies;
     int availableCopies;
 
-    Queue waitingList;
-    Book* next;
+    Queue waitingList;      // Queue for students waiting
+    Book* next;             // Points to next book
 };
 
+// Function declarations
 void insertBook(Book*& head, int id, string title, string author, int totalCopies);
 Book* searchByID(Book* head, int id);
 Book* searchByTitle(Book* head, const string &title);
