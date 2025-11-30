@@ -140,7 +140,7 @@ void loadFromFile(Book*& head, const string &filename) {
         string vals[5];
         int i = 0;
 
-        // split by ","s
+        // splits by ","s
         while ((pos = line.find(',')) != string::npos) {
             vals[i++] = line.substr(0, pos);
             line.erase(0, pos + 1);

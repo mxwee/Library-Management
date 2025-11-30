@@ -55,7 +55,7 @@ int getQueueSize(const Queue &q) {
 }
 
 void cleanupQueue(Queue &q) {
-    // delete nodes
+    // delete all nodes
     while (!isEmpty(q)) {
         dequeue(q);
     }

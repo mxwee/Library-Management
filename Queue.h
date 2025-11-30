@@ -13,7 +13,7 @@ struct Queue {
     QueueNode* front;
     QueueNode* rear;
 
-    // Initialize empty queue
+    // Initializes empty queue
     Queue() : front(nullptr), rear(nullptr) {}
 };
 

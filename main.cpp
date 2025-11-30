@@ -110,7 +110,7 @@ int main() {
         temp = head;
         head = head->next;
         cleanupQueue(temp->waitingList);    // Free queue nodes
-        delete temp;                           // free book node
+        delete temp;                           // free book nodes
     }
 
     return 0;

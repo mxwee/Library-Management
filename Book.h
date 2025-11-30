@@ -12,7 +12,7 @@ struct Book {
     int availableCopies;
 
     Queue waitingList;      // Queue for students waiting
-    Book* next;             // Points to next book
+    Book* next;             // Point to next book
 };
 
 // Function declarations
