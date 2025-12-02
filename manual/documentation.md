@@ -276,7 +276,7 @@ Used to store all books in sorted order by Book ID.
 
 **Output format**:
 ```
-ID: 101    Title: The Hobbit    Author: Tolkien    Total: 5    Available: 2    Waiting List: YES
+ID: 101    Title: The Hobbit    Author: Tolkien    Total: 5    Available: 0    Waiting List: YES
 ID: 102    Title: 1984    Author: Orwell    Total: 3    Available: 3
 ```
 
@@ -621,4 +621,5 @@ The code is modular, with clear separation between:
 - User interface (`main.cpp`)
 
 Each module can be understood independently, but they work together to create a complete system.
+
 
